@@ -105,8 +105,10 @@ section {
   opacity: 0;
 }
 .container {
-  padding: 0 40px;
   width: 100%;
+}
+.container-padding {
+  padding: 0 40px;
 }
 .row {
   display: flex;
@@ -194,7 +196,6 @@ button {
 .home-text,
 .home-img {
   flex: 1;
-  padding: 15px;
 }
 
 .home-img > .img-box {
@@ -358,8 +359,8 @@ button {
   padding-bottom: 50px;
 }
 .portfolio-item {
-  width: calc((100% / 3) - 30px);
-  margin: 0 15px 30px;
+  width: 33.33%;
+  padding: 0 15px 30px;
 }
 .portfolio-item > h3 {
   font-size: 20px;

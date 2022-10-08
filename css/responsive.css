@@ -1,0 +1,63 @@
+/* Desktop responsive */
+@media screen and (min-width: 1024px) {
+}
+/* tablet - desktop responsive */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* about */
+  .about-img > .img-box {
+    height: 280px !important;
+    width: 280px !important;
+    background-size: 440px !important;
+  }
+  /* portfolio screen */
+  .portfolio-item {
+    width: 50%;
+  }
+}
+/* Mobile responsive */
+@media screen and (max-width: 767px) {
+  /* home-screen */
+  .container-padding {
+    padding: 0 16px;
+  }
+  .home-text > h1 {
+    font-size: 28px;
+  }
+  .home-text > h2 {
+    font-size: 18px;
+  }
+  .home-img > .img-box {
+    width: 280px;
+    height: 280px;
+    background-size: 420px;
+  }
+  /* about screen */
+  .about-img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .about-text {
+    width: 100%;
+  }
+  .about-img > .img-box {
+    height: 280px !important;
+    width: 280px !important;
+    background-size: 440px !important;
+  }
+  /* portfolio screen */
+  .portfolio-item {
+    width: 50%;
+  }
+}
+/* xs screen */
+@media screen and (max-width: 576px) {
+  /* contact screen */
+  .contact-info {
+    margin-top: 15px;
+  }
+  /* portfolio screen */
+
+  .portfolio-item {
+    width: 100%;
+  }
+}

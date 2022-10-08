@@ -1,6 +1,31 @@
 // About Tab
 const aboutSection = document.querySelector(".about-section"),
-  aboutTabs = document.querySelector(".about-tabs");
+  aboutTabs = document.querySelector(".about-tabs"),
+  aboutBtn = document.getElementById("aboutBtn"),
+  portfolioBtn = document.getElementById("portfolioBtn"),
+  homeSection = document.querySelector(".home-section"),
+  portfolioSection = document.querySelector(".portfolio-section"),
+  contactSection = document.querySelector(".contact-section"),
+  contactBtn = document.getElementById("contactBtn");
+
+aboutBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  aboutSection.classList.remove("hidden");
+  homeSection.classList.add("hidden");
+});
+
+portfolioBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  portfolioSection.classList.remove("hidden");
+  homeSection.classList.add("hidden");
+});
+
+contactBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  contactSection.classList.remove("hidden");
+  aboutSection.classList.add("hidden");
+});
+// about tabs
 aboutTabs.addEventListener("click", (e) => {
   if (
     e.target.classList.contains("tab-item") &&
@@ -15,6 +40,13 @@ aboutTabs.addEventListener("click", (e) => {
     aboutSection.querySelector(target).classList.add("active");
   }
 });
+
+// popup hiden when click on outside popup
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("pp-inner")) {
+    togglePortfolioPopup();
+  }
+});
 // Portfolio item Detail Popup
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("view-project-btn")) {
@@ -23,21 +55,16 @@ document.addEventListener("click", (e) => {
     portfolioItemDetail(e.target.parentElement);
   }
 });
-// popup hiden when click on outside popup
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("pp-inner")) {
-    togglePortfolioPopup();
-  }
-});
+
+document
+  .querySelector(".pp-close")
+  .addEventListener("click", togglePortfolioPopup);
+
 function togglePortfolioPopup() {
   document.querySelector(".portfolio-popup").classList.toggle("open");
   document.body.classList.toggle("hidden-scroll");
   document.querySelector(".main").classList.toggle("fadeUp");
 }
-document
-  .querySelector(".pp-close")
-  .addEventListener("click", togglePortfolioPopup);
-
 function portfolioItemDetail(portfolioItem) {
   document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(
     ".portfolio-thumbnail img"
@@ -48,6 +75,7 @@ function portfolioItemDetail(portfolioItem) {
     ".portfolio-item-detail"
   ).innerHTML;
 }
+
 // Testing Code
 // function showProfilePopup(e) {
 //   const title = e.getAttribute("data-title");
