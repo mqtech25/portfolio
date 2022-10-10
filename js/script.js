@@ -6,7 +6,9 @@ const aboutSection = document.querySelector(".about-section"),
   homeSection = document.querySelector(".home-section"),
   portfolioSection = document.querySelector(".portfolio-section"),
   contactSection = document.querySelector(".contact-section"),
-  contactBtn = document.getElementById("contactBtn");
+  contactBtn = document.getElementById("contactBtn"),
+  navBtn = document.querySelector(".nav-toggle"),
+  menuNav = document.querySelector(".menu-nav");
 
 aboutBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -24,6 +26,14 @@ contactBtn.addEventListener("click", function (e) {
   e.preventDefault();
   contactSection.classList.remove("hidden");
   aboutSection.classList.add("hidden");
+});
+
+navBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  this.classList.toggle("open");
+  setTimeout(() => {
+    menuNav.classList.toggle("hidden");
+  }, 60);
 });
 // about tabs
 aboutTabs.addEventListener("click", (e) => {
