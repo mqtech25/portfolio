@@ -261,7 +261,6 @@ button {
   text-transform: capitalize;
   font-size: 32px;
   margin: 6px 0;
-  color: var(--blue-dark);
   position: relative;
   padding: 4px;
   transition: all 0.3s ease;
@@ -274,9 +273,16 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   transform: translateY(30px);
   background-color: var(--white-alpha-40);
   transition: all 0.3s ease;
+}
+.header-nav .menu-nav .nav-item a {
+  color: var(--blue-dark);
+}
+.header-nav .menu-nav .nav-item:hover a {
+  color: var(--main-color);
 }
 .header-nav .menu-nav .nav-item:hover::before {
   height: 100%;

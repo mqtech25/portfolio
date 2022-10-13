@@ -22,16 +22,16 @@
             <span></span>
           </button>
           <ul class="menu-nav hidden">
-            <li class="nav-item"><a href="">home</a></li>
-            <li class="nav-item"><a href="">about</a></li>
-            <li class="nav-item"><a href="">portfolio</a></li>
-            <li class="nav-item"><a href="">contact us</a></li>
+            <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+            <li class="nav-item"><a href="#portfolio" class="nav-link">portfolio</a></li>
+            <li class="nav-item"><a href="#contactUs" class="nav-link">contact us</a></li>
           </ul>
         </div>
       </div>
     </header>
     <!-- home-section -->
-    <section class="home-section center">
+    <section class="home-section center" id="home">
       <div class="container container-padding">
         <div class="row center">
           <div class="home-text">
@@ -39,8 +39,8 @@
             <h1>Muhammad Qasim</h1>
             <h2>FrontEnd Web Developer</h2>
             <div class="btn-group">
-              <a href="" class="btn" id="aboutBtn">about me</a>
-              <a href="" class="btn" id="portfolioBtn">portfolio</a>
+              <a href="#about" class="btn link-item" id="aboutBtn">about me</a>
+              <a href="#portfolio" class="btn link-item" id="portfolioBtn">portfolio</a>
             </div>
           </div>
           <div class="home-img">
@@ -51,7 +51,7 @@
     </section>
     <!-- home-section-end -->
     <!-- about-section -->
-    <section class="about-section section-padding hidden">
+    <section class="about-section section-padding hidden" id="about">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -145,14 +145,14 @@
             </div>
             <!-- experience tab end -->
             <a href="#" class="btn">Download Cv</a>
-            <a href="#" class="btn" id="contactBtn">Contact Us</a>
+            <a href="#contactUs" class="btn link-item">Contact Us</a>
           </div>
         </div>
       </div>
     </section>
     <!-- about-section-end -->
     <!-- portfolio section -->
-    <section class="portfolio-section section-padding hidden">
+    <section class="portfolio-section section-padding hidden" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -348,7 +348,7 @@
     </section>
     <!-- portfolio section end -->
     <!-- ContactUs section -->
-    <section class="contact-section section-padding hidden">
+    <section class="contact-section section-padding hidden" id="contactUs">
       <div class="container">
         <div class="row">
           <div class="section-title">
