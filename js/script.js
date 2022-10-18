@@ -27,19 +27,37 @@ const aboutSection = document.querySelector(".about-section"),
 //   contactSection.classList.remove("hidden");
 //   aboutSection.classList.add("hidden");
 // });
+
+// Active Section
 document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("nav-link") && e.target.hash != "") {
-    console.log(e.target.classList);
-    alert("hoi");
+  if (e.target.classList.contains("link-item") && e.target.hash != "") {
+      if(e.target.classList.contains("nav-link")){
+        toggleMenu(navBtn);
+      }
+      setTimeout(()=>{
+        var activeSection=document.querySelector("section.active");
+        activeSection.classList.remove('active');
+        activeSection.classList.add('hidden');
+        document.querySelector(e.target.hash).classList.add("active");
+        document.querySelector(e.target.hash).classList.remove("hidden");
+        window.scrollTo(0,0);
+        document.body.classList.remove("hide-scolling");
+
+      },200)
   }
 });
 navBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  this.classList.toggle("open");
+  toggleMenu(navBtn);
+});
+// toggleMenu func
+function toggleMenu(navToggle) {
+  navToggle.classList.toggle("open");
   setTimeout(() => {
     menuNav.classList.toggle("hidden");
   }, 60);
-});
+}
+
 // about tabs
 aboutTabs.addEventListener("click", (e) => {
   if (

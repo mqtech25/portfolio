@@ -20,6 +20,14 @@
   .container-padding {
     padding: 0 16px;
   }
+  .home-text{
+    order: 2;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .home-img{
+    order: 1;
+  }
   .home-text > h1 {
     font-size: 28px;
   }

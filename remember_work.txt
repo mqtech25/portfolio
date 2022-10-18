@@ -1,0 +1,7 @@
+href #id active on load page
+if page loader add
+bowser scroll style correct on multi browers
+porfolio content dynamic load
+overall portfolio content
+contact email
+
