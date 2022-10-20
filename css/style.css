@@ -26,12 +26,18 @@
 ::after {
   box-sizing: border-box;
 }
+html{
+  scrollbar-color: var(--main-color) var(--white);
+  scrollbar-width:thin;
+}
+
 body {
   min-height: 100vh;
   background-image: linear-gradient(
     to bottom right,
     var(--pink-light),
     var(--cyan-light)
+
   );
   background-attachment: fixed;
   color: var(--blue-dark);
@@ -41,6 +47,7 @@ body {
   padding: 5vh 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  
 }
 body::before {
   content: "";

@@ -27,7 +27,17 @@ const aboutSection = document.querySelector(".about-section"),
 //   contactSection.classList.remove("hidden");
 //   aboutSection.classList.add("hidden");
 // });
-
+// Load page
+window.onload=(e)=>{
+  var hash = window.location.hash;
+  if(hash!=""){
+    hash=hash.substring(0,hash.length);
+    homeSection.classList.add("hidden");
+    homeSection.classList.remove("active");
+    document.querySelector(hash).classList.remove("hidden");
+    document.querySelector(hash).classList.add("active");
+  }
+}
 // Active Section
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("link-item") && e.target.hash != "") {
