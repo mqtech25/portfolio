@@ -82,6 +82,9 @@ img {
 ul {
   list-style: none;
 }
+.mb-0{
+  margin-bottom: 0 !important;
+}
 /* section */
 section {
   background-color: var(--white-alpha-25);
