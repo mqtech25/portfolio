@@ -17,6 +17,11 @@
 <body>
   <!-- particles.js container -->
   <div id="particles-js"></div>
+  <div class="custom-alert" role="alert">
+    <i class="fas fa-check"></i>
+    Your message has successfully send.
+  </div>
+  
   <!-- main -->
   <div class="main">
     <!-- Header nav -->
@@ -256,19 +261,19 @@
         </div>
         <div class="row">
           <div class="contact-form">
-            <form>
+            <form onsubmit="sendEmail();">
               <div class="row">
                 <div class="input-group">
-                  <input type="text" class="input-control" placeholder="Name" required />
+                  <input type="text" class="input-control" id="name" placeholder="Name" required />
                 </div>
                 <div class="input-group">
-                  <input type="email" class="input-control" placeholder="Email" required />
+                  <input type="email" class="input-control" id="email" placeholder="Email" required />
                 </div>
                 <div class="input-group">
-                  <input type="text" class="input-control" placeholder="Subject" required />
+                  <input type="text" class="input-control" id="subject" placeholder="Subject" required />
                 </div>
                 <div class="input-group">
-                  <textarea id="message" class="input-control" placeholder="Message" required></textarea>
+                  <textarea class="input-control" id="message" placeholder="Message" required></textarea>
                 </div>
                 <div class="submit-btn">
                   <button type="submit" class="btn">send message</button>
@@ -310,7 +315,7 @@
             <i class="fas fa-times"></i>
           </button>
           <div class="pp-thumbnail">
-            <img src="img/portfolio/portfolio_1.png" alt="portfolio-thumbnail" id="portfolio_popup_thumbnail"
+            <img src="" alt="portfolio-thumbnail" id="portfolio_popup_thumbnail"
               srcset="" />
           </div>
           <h3 id="portfolio_popup_title"></h3>
@@ -323,7 +328,35 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <!-- Portfolio Popup end -->
   <script src="js/script.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- smtp js -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
+  <script>
+    var senderName= document.getElementById('name').value;
+    var senderEmail= document.getElementById('email').value;
+    var subject=document.getElementById('subject').value;
+    var message=document.getElementById('message').value;
+    var alertMsg= document.querySelector('.custom-alert');
+    function sendEmail() {
+        Email.send({
+        SecureToken:'7634d9dd-a96f-4973-96ea-47b7daa732c1',
+        To : 'mqtech25@gmail.com',
+        From : "mqdxiner01@gmail.com",
+        Subject : subject,
+        Body :"Name :"+senderName+"<br>"+"Email :"+senderEmail+"<br>"+"Subject : "+subject+"<br>"+"Message :"+ message
+        }).then(function (message) {
+            alertMsg.classList.add('fadeIn'),
+            setTimeout(() => {
+            alertMsg.classList.remove('fadeIn');
+            }, 2000)
+            document.getElementById('name').value=""
+            document.getElementById('email').value="";
+            document.getElementById('subject').value="";
+            document.getElementById('message').value="";
+          });
+      }
+  </script>
 </body>
 
 </html>

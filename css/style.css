@@ -85,6 +85,10 @@ ul {
 .mb-0{
   margin-bottom: 0 !important;
 }
+.fadeIn{
+  opacity: 1 !important;
+  display: block !important;
+}
 /* section */
 section {
   background-color: var(--white-alpha-25);
@@ -663,4 +667,18 @@ button {
 .contact-info-item .social-link a:hover {
   color: var(--white);
   background-color: var(--main-color);
+}
+/* alert */
+.custom-alert{
+  position: fixed;
+z-index: 1000;
+width: max-content;
+background: #b0bf85;
+padding: 15px;
+border-radius: 0 0.5rem 0.5rem 0;
+left: 0;
+top: 0;
+display: none;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
 }

@@ -10,6 +10,7 @@ const aboutSection = document.querySelector(".about-section"),
   navBtn = document.querySelector(".nav-toggle"),
   menuNav = document.querySelector(".menu-nav");
 
+  
 // aboutBtn.addEventListener("click", function (e) {
 //   e.preventDefault();
 //   aboutSection.classList.remove("hidden");
