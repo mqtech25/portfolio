@@ -333,12 +333,13 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   
   <script>
+
+    function sendEmail() {
     var senderName= document.getElementById('name').value;
     var senderEmail= document.getElementById('email').value;
     var subject=document.getElementById('subject').value;
     var message=document.getElementById('message').value;
     var alertMsg= document.querySelector('.custom-alert');
-    function sendEmail() {
         Email.send({
         SecureToken:'7634d9dd-a96f-4973-96ea-47b7daa732c1',
         To : 'mqtech25@gmail.com',
