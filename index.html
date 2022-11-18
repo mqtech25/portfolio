@@ -261,7 +261,7 @@
         </div>
         <div class="row">
           <div class="contact-form">
-            <form onsubmit="sendEmail();">
+            <form onsubmit="sendEmail(); reset(); return false">
               <div class="row">
                 <div class="input-group">
                   <input type="text" class="input-control" id="name" placeholder="Name" required />
