@@ -8,8 +8,8 @@ const aboutSection = document.querySelector(".about-section"),
   contactSection = document.querySelector(".contact-section"),
   contactBtn = document.getElementById("contactBtn"),
   navBtn = document.querySelector(".nav-toggle"),
-  menuNav = document.querySelector(".menu-nav");
-
+  menuNav = document.querySelector(".menu-nav"),
+  loader=document.querySelector(".loader")
   
 // aboutBtn.addEventListener("click", function (e) {
 //   e.preventDefault();
@@ -39,6 +39,10 @@ window.onload=(e)=>{
     document.querySelector(hash).classList.add("active");
   }
 }
+document.addEventListener("DOMContentLoaded", function(event) {
+  loader.style.transform = "translateY(-100%)"
+});
+
 // Active Section
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("link-item") && e.target.hash != "") {
