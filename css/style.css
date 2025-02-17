@@ -355,7 +355,8 @@ button {
   background-image: url("../img/mqtech25_profile_img.JPG");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 550px;
+  background-size: 370px;
+  background-position: top;
   border: 8px solid var(--white-alpha-25);
 
   margin: auto;
@@ -379,7 +380,8 @@ button {
   margin: auto;
   background-image: url("../img/mqtech25_profile_img.JPG");
   background-position: center center;
-  background-size: 560px;
+  background-size: 370px;
+  background-position: top;
   background-repeat: no-repeat;
   height: 360px;
   width: 360px;
